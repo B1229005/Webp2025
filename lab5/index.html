@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>lab5</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script>
+    function tree(n) {
+        printTreeTop(n);
+        printTreeBottom(n);
+    }
+
+    function printTreeTop(n) {
+        for (let i = 0; i < n; i++) {
+            let spaces = repeatchar(n - i - 1, ' ');
+            let stars = repeatchar(2 * i + 1, '*');
+            console.log(spaces + stars);
+        }
+    }
+
+    function printTreeBottom(n) {
+        let trunkSpace = repeatchar(n - 1, ' ');
+        for (let i = 0; i < 3; i++) {
+            console.log(trunkSpace + '*');
+        }
+    }
+
+    function repeatchar(n, arg_char) {
+        return arg_char.repeat(n);
+    }
+
+    tree(5);
+</script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
